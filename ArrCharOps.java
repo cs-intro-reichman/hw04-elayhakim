@@ -170,7 +170,7 @@ public class ArrCharOps {
             return -1;
         }else if(length1 > length2) {
             return 1;
-  
+        }
         return 0;
     }
 }
