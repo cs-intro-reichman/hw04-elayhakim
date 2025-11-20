@@ -43,6 +43,7 @@ public class ArrCharOps {
      *  returns true; Otherwise returns false.
      */
     public static boolean equals(char[] arr1, char[] arr2) {
+        
         if(arr1.length != arr2.length){
             return false;
         }
@@ -161,10 +162,12 @@ public class ArrCharOps {
     public static int compareTo(String str1, String str2) {
         int length1 = str1.length();
         int length2 = str2.length();
+        String str3= str1.toLowerCase();
+        String str4= str2.toLowerCase();
         for(int i=0; i< Math.min(length2, length1); i++){
-            if(str1.charAt(i) < str2.charAt(i)){
+            if(str3.charAt(i) < str4.charAt(i)){
                 return -1;
-            }else if(str1.charAt(i) > str2.charAt(i)){
+            }else if(str3.charAt(i) > str4.charAt(i)){
                  return 1;
             }
         }
