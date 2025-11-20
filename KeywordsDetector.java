@@ -18,9 +18,46 @@ public class KeywordsDetector {
         detectAndPrint(sentences, keywords);
     }
 
-    // Iterates through all the sentences.
+    // Iterates through all the sentences. 
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
-        // Replace this comment with your code
+        for(int j= 0;j<sentences.length;j++){
+//            String[] arr = strToArr(sentences[j]);
+            String[] arr = sentences[j].split(" ");
+            for(int i= 0;i<arr.length;i++){
+                for(int z= 0;z<keywords.length;z++){
+                    if(keywords[z].equalsIgnoreCase(arr[i])){
+                        System.out.println(sentences[j]);
+                        break;
+                    }
+                }
+            }
+        }
     }
+
+    // public static int SpacesP1(String sentence) {
+    //     int count =1;
+    //     for(int i=0; i<sentence.length();i++){
+    //         if(sentence.charAt(i)== ' '){
+    //             count++;
+    //         }
+    //     }
+    //     return count;
+    // }
+
+    // public static String[] strToArr(String str){
+    //     String[] arr = new String[SpacesP1(str)];
+    //     int i=0;
+    //     for(int j =0; j<arr.length;j++){
+    //         arr[j]="";
+    //         while (i < str.length() && str.charAt(i) != ' ') {
+    //             arr[j]+= str.charAt(i);
+    //             i++;
+    //         }
+    //         while (str.charAt(i) == ' '){
+    //             i++;
+    //         }
+    //     }
+    //    return arr;
+    // }
 }
