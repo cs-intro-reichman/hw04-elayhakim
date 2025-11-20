@@ -164,10 +164,14 @@ public class ArrCharOps {
                 return -1;
             }else if(str1.charAt(i) > str2.charAt(i)){
                  return 1;
-            }else{
-              return 0;   
             }
         }
-        return 0;
+        if(length1 < length2){
+            return -1;
+        }else if(length1 > length2) {
+            return 1;
+        }else{
+            return 0;
+        }
     }
 }
