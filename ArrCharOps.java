@@ -126,10 +126,10 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        int hash =0;
+        long hash =0;
         int n = arr.length;
         for(int i=0;i<n;i++){
-            hash+= (arr[i])* Math.pow(7,(n-i-1));
+            hash = hash * 7 + arr[i];
         }
         return hash;
     }
@@ -160,6 +160,9 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
+        if (str1 == null || str2 == null) {
+            return -2;
+        }
         int length1 = str1.length();
         int length2 = str2.length();
         for(int i=0; i< Math.min(length2, length1); i++){
